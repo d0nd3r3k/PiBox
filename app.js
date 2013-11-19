@@ -21,11 +21,10 @@ app.configure(function(){
 app.get('/', routes.index);
 
 server.listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log("run-" + app.get('port'));
 });
 
 var io = require("socket.io").listen(server)
-
 //Socket.io Server
 io.sockets.on('connection', function (socket) {
 
